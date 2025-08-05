@@ -1,5 +1,5 @@
 [build]
-  publish = "dist/clubhousecenter-website/browser"
+  publish = "dist/clubhouse-center/browser"
   command = "npm run build"
 
 [[redirects]]

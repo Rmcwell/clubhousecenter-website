@@ -1,1 +1,36 @@
-<p>hero works!</p>
+<div class="hero-section">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <div class="hero-badge">
+          Prime Industrial Location
+        </div>
+        <h1 class="hero-title">
+          {{ property?.name }}
+        </h1>
+        <p class="hero-description">
+          {{ property?.description }}
+        </p>
+        <div class="hero-buttons">
+          <button mat-raised-button color="primary" class="hero-btn-primary">
+            Schedule Tour
+          </button>
+          <button mat-stroked-button class="hero-btn-secondary">
+            Download Brochure
+          </button>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3 class="card-title">Property Highlights</h3>
+        <div class="features-grid">
+          <div *ngFor="let feature of property?.features" class="feature-item">
+            <lucide-icon [name]="feature.icon" class="feature-icon"></lucide-icon>
+            <div class="feature-label">{{ feature.label }}</div>
+            <div class="feature-desc">{{ feature.desc }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

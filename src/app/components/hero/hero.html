@@ -3,9 +3,10 @@
     class="hero-video" 
     [src]="currentVideo" 
     autoplay 
-    muted 
+    [muted]="true" 
     loop
-    playsinline>
+    playsinline
+    preload="auto">
   </video>
   <div class="hero-overlay">
     <div class="container">

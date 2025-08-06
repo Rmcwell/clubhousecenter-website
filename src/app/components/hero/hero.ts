@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Property } from '../../models/property.model';
 import { PropertyService } from '../../services/property.service';
 import { CommonModule } from '@angular/common';
@@ -12,9 +12,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './hero.html',
   styleUrls: ['./hero.css']
 })
-export class HeroComponent implements OnInit, OnDestroy {
-
-  @ViewChild('heroVideo', { static: false }) heroVideoRef!: ElementRef<HTMLVideoElement>;
+export class HeroComponent implements OnInit {
 
   property: Property | null = null;
   heroImage = 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop';
@@ -55,16 +53,6 @@ export class HeroComponent implements OnInit, OnDestroy {
     this.videoInterval = setInterval(() => {
       this.currentVideoIndex = (this.currentVideoIndex + 1) % this.videoList.length;
       this.currentVideo = this.videoList[this.currentVideoIndex];
-      
-      // Force the video to play after changing source
-      setTimeout(() => {
-        if (this.heroVideoRef?.nativeElement) {
-          this.heroVideoRef.nativeElement.load();
-          this.heroVideoRef.nativeElement.play().catch(error => {
-            console.log('Video play failed:', error);
-          });
-        }
-      }, 100);
     }, 5000); // Switch every 5 seconds
   }
 }

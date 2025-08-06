@@ -1,23 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { Property } from '../../models/property.model';
-import { PropertyService } from '../../services/property.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-property-details',
+  standalone: false,
   templateUrl: './property-details.html',
-  styleUrls: ['./property-details.css']
+  styleUrl: './property-details.css'
 })
-export class PropertyDetailsComponent implements OnInit {
-  property: Property | null = null;
-  activeTabIndex = 0;
+export class PropertyDetailsComponent {
 
-  constructor(private propertyService: PropertyService) {}
-
-  ngOnInit(): void {
-    this.propertyService.getProperty().subscribe(
-      (data: Property) => {
-        this.property = data;
-      }
-    );
-  }
 }

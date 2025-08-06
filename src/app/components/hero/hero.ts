@@ -1,22 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { Property } from '../../models/property.model';
-import { PropertyService } from '../../services/property.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-hero',
+  standalone: false,
   templateUrl: './hero.html',
-  styleUrls: ['./hero.css']
+  styleUrl: './hero.css'
 })
-export class HeroComponent implements OnInit {
-  property: Property | null = null;
+export class HeroComponent {
 
-  constructor(private propertyService: PropertyService) {}
-
-  ngOnInit(): void {
-    this.propertyService.getProperty().subscribe(
-      (data: Property) => {
-        this.property = data;
-      }
-    );
-  }
 }

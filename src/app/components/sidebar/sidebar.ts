@@ -1,22 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { Property } from '../../models/property.model';
-import { PropertyService } from '../../services/property.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
+  standalone: false,
   templateUrl: './sidebar.html',
-  styleUrls: ['./sidebar.css']
+  styleUrl: './sidebar.css'
 })
-export class SidebarComponent implements OnInit {
-  property: Property | null = null;
+export class SidebarComponent {
 
-  constructor(private propertyService: PropertyService) {}
-
-  ngOnInit(): void {
-    this.propertyService.getProperty().subscribe(
-      (data: Property) => {
-        this.property = data;
-      }
-    );
-  }
 }

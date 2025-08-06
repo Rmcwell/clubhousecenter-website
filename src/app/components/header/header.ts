@@ -2,13 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header',
+  standalone: false,
   templateUrl: './header.html',
-  styleUrls: ['./header.css']
+  styleUrl: './header.css'
 })
 export class HeaderComponent {
-  mobileMenuOpen = false;
 
-  toggleMobileMenu(): void {
-    this.mobileMenuOpen = !this.mobileMenuOpen;
-  }
 }

@@ -9,7 +9,7 @@ import { MatCardModule } from '@angular/material/card';
 import { RouterModule } from '@angular/router'; // Add this import
 import { LucideAngularModule, Menu, X, Phone, Mail, MapPin, Square, Truck, Zap, Shield, Star, ArrowRight } from 'lucide-angular';
 
-import { AppComponent } from './app';
+import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header';
 import { HeroComponent } from './components/hero/hero';
 import { PropertyDetailsComponent } from './components/property-details/property-details';
@@ -17,13 +17,15 @@ import { SidebarComponent } from './components/sidebar/sidebar';
 import { FooterComponent } from './components/footer/footer';
 
 @NgModule({
-  imports: [
+  declarations: [
     AppComponent,
     HeaderComponent,
     HeroComponent,
     PropertyDetailsComponent,
     SidebarComponent,
-    FooterComponent,
+    FooterComponent
+  ],
+  imports: [
     RouterModule.forRoot([]),
     BrowserModule,
     BrowserAnimationsModule,
@@ -34,5 +36,6 @@ import { FooterComponent } from './components/footer/footer';
     MatCardModule,
     LucideAngularModule.pick({ Menu, X, Phone, Mail, MapPin, Square, Truck, Zap, Shield, Star, ArrowRight })
   ],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

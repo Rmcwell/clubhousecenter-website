@@ -13,9 +13,9 @@ import { LucideIconsModule } from '../../lucide.module';
   styleUrls: ['./header.css']
 })
 export class HeaderComponent {
-  mobileMenuOpen = false;
+  isMobileMenuOpen = false;
 
   toggleMobileMenu(): void {
-    this.mobileMenuOpen = !this.mobileMenuOpen;
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
   }
 }

@@ -1,0 +1,225 @@
+<div class="property-details">
+  <!-- Tab Navigation -->
+  <mat-tab-group [(selectedIndex)]="activeTabIndex" class="details-tabs">
+    <mat-tab label="Overview">
+      <div class="tab-content">
+        <h2 class="section-title">Property Overview</h2>
+        <div class="overview-content">
+          <p class="overview-text">
+            Executive Warehouse Complex represents the pinnacle of modern industrial real estate. 
+            Located in a prime logistics corridor, this facility offers unparalleled access to major 
+            transportation networks while providing the sophisticated infrastructure that today's 
+            businesses demand.
+          </p>
+          <p class="overview-text">
+            Our 150,000 square foot facility features state-of-the-art construction with 32-foot 
+            clear heights, multiple dock doors, and flexible column spacing that accommodates a 
+            wide range of industrial and distribution operations.
+          </p>
+        </div>
+        
+        <div class="features-grid">
+          <div class="feature-column">
+            <h3 class="feature-title">Key Features</h3>
+            <ul class="feature-list">
+              <li class="feature-item">
+                <lucide-icon name="arrow-right" class="feature-bullet"></lucide-icon>
+                ESFR sprinkler system
+              </li>
+              <li class="feature-item">
+                <lucide-icon name="arrow-right" class="feature-bullet"></lucide-icon>
+                LED lighting throughout
+              </li>
+              <li class="feature-item">
+                <lucide-icon name="arrow-right" class="feature-bullet"></lucide-icon>
+                Energy-efficient HVAC
+              </li>
+              <li class="feature-item">
+                <lucide-icon name="arrow-right" class="feature-bullet"></lucide-icon>
+                Professional management
+              </li>
+            </ul>
+          </div>
+          <div class="feature-column">
+            <h3 class="feature-title">Transportation Access</h3>
+            <ul class="feature-list">
+              <li class="feature-item">
+                <lucide-icon name="arrow-right" class="feature-bullet"></lucide-icon>
+                2 miles to Interstate 95
+              </li>
+              <li class="feature-item">
+                <lucide-icon name="arrow-right" class="feature-bullet"></lucide-icon>
+                15 minutes to airport
+              </li>
+              <li class="feature-item">
+                <lucide-icon name="arrow-right" class="feature-bullet"></lucide-icon>
+                Rail access available
+              </li>
+              <li class="feature-item">
+                <lucide-icon name="arrow-right" class="feature-bullet"></lucide-icon>
+                Port proximity
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Specifications">
+      <div class="tab-content">
+        <h2 class="section-title">Building Specifications</h2>
+        <div class="specs-grid">
+          <div class="spec-section">
+            <h3 class="spec-title">Building Details</h3>
+            <div class="spec-list">
+              <div class="spec-item">
+                <span>Total Size:</span>
+                <span class="spec-value">{{ property?.specifications?.totalSize }}</span>
+              </div>
+              <div class="spec-item">
+                <span>Clear Height:</span>
+                <span class="spec-value">{{ property?.specifications?.clearHeight }}</span>
+              </div>
+              <div class="spec-item">
+                <span>Column Spacing:</span>
+                <span class="spec-value">{{ property?.specifications?.columnSpacing }}</span>
+              </div>
+              <div class="spec-item">
+                <span>Construction:</span>
+                <span class="spec-value">{{ property?.specifications?.construction }}</span>
+              </div>
+              <div class="spec-item">
+                <span>Roof:</span>
+                <span class="spec-value">{{ property?.specifications?.roof }}</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="spec-section">
+            <h3 class="spec-title">Dock & Doors</h3>
+            <div class="spec-list">
+              <div class="spec-item">
+                <span>Dock Doors:</span>
+                <span class="spec-value">{{ property?.specifications?.dockDoors }} doors</span>
+              </div>
+              <div class="spec-item">
+                <span>Grade Doors:</span>
+                <span class="spec-value">{{ property?.specifications?.gradeDoors }} doors</span>
+              </div>
+              <div class="spec-item">
+                <span>Dock Levelers:</span>
+                <span class="spec-value">Hydraulic</span>
+              </div>
+              <div class="spec-item">
+                <span>Trailer Restraints:</span>
+                <span class="spec-value">Included</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Amenities">
+      <div class="tab-content">
+        <h2 class="section-title">Amenities & Services</h2>
+        <div class="amenities-grid">
+          <div class="amenity-section">
+            <h3 class="amenity-title">On-Site Amenities</h3>
+            <ul class="amenity-list">
+              <li class="amenity-item">
+                <lucide-icon name="star" class="amenity-icon"></lucide-icon>
+                Professional property management office
+              </li>
+              <li class="amenity-item">
+                <lucide-icon name="star" class="amenity-icon"></lucide-icon>
+                24/7 security and surveillance
+              </li>
+              <li class="amenity-item">
+                <lucide-icon name="star" class="amenity-icon"></lucide-icon>
+                On-site maintenance team
+              </li>
+              <li class="amenity-item">
+                <lucide-icon name="star" class="amenity-icon"></lucide-icon>
+                Truck wash facility
+              </li>
+              <li class="amenity-item">
+                <lucide-icon name="star" class="amenity-icon"></lucide-icon>
+                Employee break areas
+              </li>
+              <li class="amenity-item">
+                <lucide-icon name="star" class="amenity-icon"></lucide-icon>
+                Fitness center access
+              </li>
+            </ul>
+          </div>
+          <div class="amenity-section">
+            <h3 class="amenity-title">Nearby Services</h3>
+            <ul class="amenity-list">
+              <li class="amenity-item">
+                <lucide-icon name="map-pin" class="amenity-icon"></lucide-icon>
+                Restaurants within walking distance
+              </li>
+              <li class="amenity-item">
+                <lucide-icon name="map-pin" class="amenity-icon"></lucide-icon>
+                Banking and financial services
+              </li>
+              <li class="amenity-item">
+                <lucide-icon name="map-pin" class="amenity-icon"></lucide-icon>
+                Truck stops and fuel stations
+              </li>
+              <li class="amenity-item">
+                <lucide-icon name="map-pin" class="amenity-icon"></lucide-icon>
+                Equipment rental companies
+              </li>
+              <li class="amenity-item">
+                <lucide-icon name="map-pin" class="amenity-icon"></lucide-icon>
+                Public transportation access
+              </li>
+              <li class="amenity-item">
+                <lucide-icon name="map-pin" class="amenity-icon"></lucide-icon>
+                Hotel accommodations
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Location">
+      <div class="tab-content">
+        <h2 class="section-title">Strategic Location</h2>
+        <div class="location-card">
+          <h3 class="location-title">Address</h3>
+          <p class="location-address">
+            1250 Executive Boulevard<br />
+            Industrial District, MD 21031
+          </p>
+          
+          <div class="location-grid">
+            <div class="location-section">
+              <h4 class="location-subtitle">Transportation Times</h4>
+              <ul class="location-list">
+                <li>Interstate 95: 5 minutes</li>
+                <li>BWI Airport: 15 minutes</li>
+                <li>Port of Baltimore: 25 minutes</li>
+                <li>Downtown Baltimore: 30 minutes</li>
+                <li>Washington DC: 45 minutes</li>
+              </ul>
+            </div>
+            <div class="location-section">
+              <h4 class="location-subtitle">Demographics</h4>
+              <ul class="location-list">
+                <li>Population (5-mile): 125,000</li>
+                <li>Labor force: 65,000</li>
+                <li>Avg. HH Income: $75,000</li>
+                <li>Major employers nearby</li>
+                <li>Skilled workforce available</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>

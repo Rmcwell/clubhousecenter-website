@@ -1,51 +1,97 @@
-<section id="property-details" class="property-details">
+<section class="property-section">
       <div class="container">
-        <h2>Property Overview</h2>
-        <div class="property-grid">
-          <div class="property-description">
-            <h3>About Executive Plaza IV</h3>
-            <p>{{ property?.description }}</p>
-            <div class="property-highlights">
-              <div class="highlight">
-                <h4>Prime Location</h4>
-                <p>Located in the heart of Hunt Valley, offering excellent access to major highways and public transportation.</p>
-              </div>
-              <div class="highlight">
-                <h4>Professional Environment</h4>
-                <p>Join a prestigious business community with leading companies across various industries.</p>
-              </div>
+        <h2 class="section-title">Property Details</h2>
+        <div class="content-grid">
+          <div class="info-section">
+            <h3 class="info-title">About Executive Plaza IV</h3>
+            <p class="info-description">
+              Executive Plaza IV is a premium Class A office building offering
+              modern amenities and flexible floor plans for businesses of all
+              sizes. Located in the heart of Baltimore's business district, this
+              property provides an ideal setting for companies looking to
+              establish or expand their presence.
+            </p>
+            <p class="info-description">
+              With 120,000 square feet of leasable space spread across 10
+              floors, Executive Plaza IV combines functionality with elegant
+              design to create an impressive workspace environment.
+            </p>
+            <div class="building-info">
+              <svg class="building-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                      d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+              </svg>
+              <span class="building-text">120,000 SF Total Area</span>
             </div>
           </div>
-          <div class="availability-table">
-            <h3>Current Availability</h3>
-            <div class="table-responsive">
-              <table class="units-table">
-                <thead>
-                  <tr>
-                    <th>Suite</th>
-                    <th>Floor</th>
-                    <th>Sq Ft</th>
-                    <th>Rate/Sq Ft</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr *ngFor="let unit of property?.availableUnits" 
-                      [class.available]="unit.availability === 'Available'"
-                      [class.coming-soon]="unit.availability === 'Coming Soon'">
-                    <td>{{ unit.suiteNumber }}</td>
-                    <td>{{ unit.floor }}</td>
-                    <td>{{ unit.squareFootage | number }}</td>
-                    <td>{{ unit.pricePerSqFt ? ('$' + unit.pricePerSqFt) : 'Contact' }}</td>
-                    <td>
-                      <span class="status-badge" [ngClass]="getStatusClass(unit.availability)">
-                        {{ unit.availability }}
-                      </span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+          <div class="amenities-section">
+            <h3 class="amenities-title">Building Amenities</h3>
+            <ul class="amenities-list">
+              <li>
+                <lucide-icon name="lock" class="amenity-icon"></lucide-icon>
+                <span>24/7 Secure Building Access</span>
+              </li>
+              <li>
+                <lucide-icon name="layout-dashboard" class="amenity-icon"></lucide-icon>
+                <span>Modernized Lobby and Common Areas</span>
+              </li>
+              <li>
+                <lucide-icon name="circle-parking" class="amenity-icon"></lucide-icon>
+                <span>On-site Covered Parking</span>
+              </li>
+              <li>
+                <lucide-icon name="wifi" class="amenity-icon"></lucide-icon>
+                <span>High-Speed Internet Infrastructure</span>
+              </li>
+              <li>
+                <lucide-icon name="user-check" class="amenity-icon"></lucide-icon>
+                <span>On-site Property Management</span>
+              </li>
+              <li>
+                <lucide-icon name="fan" class="amenity-icon"></lucide-icon>
+                <span>Energy-Efficient HVAC Systems</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="availability-section">
+          <h3 class="availability-title">Current Availability</h3>
+          <div class="table-container">
+            <table class="availability-table">
+              <thead>
+                <tr class="table-header">
+                  <th>SUITE</th>
+                  <th>SQ FT</th>
+                  <th>RATE/SQ FT</th>
+                  <th>LOADING DOCKS</th>
+                  <th>STATUS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table-row">
+                  <td class="suite-number">100</td>
+                  <td>2,500</td>
+                  <td>$24</td>
+                  <td>Yes (2)</td>
+                  <td><span class="status-available">AVAILABLE</span></td>
+                </tr>
+                <tr class="table-row">
+                  <td class="suite-number">205</td>
+                  <td>1,800</td>
+                  <td>$26</td>
+                  <td>Yes (1)</td>
+                  <td><span class="status-available">AVAILABLE</span></td>
+                </tr>
+                <tr class="table-row">
+                  <td class="suite-number">310</td>
+                  <td>3,200</td>
+                  <td>$28</td>
+                  <td>No</td>
+                  <td><span class="status-coming-soon">COMING SOON</span></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

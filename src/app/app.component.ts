@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './components/header/header';
 import { HeroComponent } from './components/hero/hero';
 import { PropertyDetailsComponent } from './components/property-details/property-details';
-import { SidebarComponent } from './components/sidebar/sidebar';
+import { LocationComponent } from './components/location/location';
 import { FooterComponent } from './components/footer/footer';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonModule } from '@angular/material/button';
@@ -20,7 +20,7 @@ import { LucideIconsModule } from './lucide.module';
     HeaderComponent,
     HeroComponent,
     PropertyDetailsComponent,
-    SidebarComponent,
+    LocationComponent,
     FooterComponent,
     CommonModule,
     RouterModule,

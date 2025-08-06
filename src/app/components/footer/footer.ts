@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.css']
 })
 export class FooterComponent {
-
+  constructor() { }
 }

@@ -1,17 +1,12 @@
-<div class="min-h-screen bg-white">
-  <app-header></app-header>
-  <app-hero></app-hero>
-  
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <div >
-      <div>
-        <app-property-details></app-property-details>
-      </div>
-      <div>
-        <app-sidebar></app-sidebar>
-      </div>
-    </div>
-  </div>
-  
-  <app-footer></app-footer>
+
+
+
+<div className="min-h-screen bg-white">
+  <app-header />
+  <main className="flex-grow">
+    <app-hero />
+    <app-property-details />
+    <app-location />
+  </main>
+  <app-footer />
 </div>

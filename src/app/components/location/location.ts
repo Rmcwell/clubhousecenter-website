@@ -5,16 +5,16 @@ import { CommonModule } from '@angular/common';
 import { LucideIconsModule } from '../../lucide.module';
 
 @Component({
-  selector: 'app-sidebar',
+  selector: 'app-location',
   standalone: true,
     imports: [
     CommonModule,
     LucideIconsModule
   ],
-  templateUrl: './sidebar.html',
-  styleUrls: ['./sidebar.css']
+  templateUrl: './location.html',
+  styleUrls: ['./location.css']
 })
-export class SidebarComponent implements OnInit {
+export class LocationComponent implements OnInit {
   property: Property | null = null;
 
   constructor(private propertyService: PropertyService) {}

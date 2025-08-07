@@ -1,0 +1,131 @@
+<section class="contact-section">
+      <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="content-grid">
+          <div class="info-section">
+            <h3 class="info-title">Leasing Information</h3>
+            <p class="info-description">
+              Interested in leasing space at Executive Plaza IV? Contact our
+              leasing team for more information or to schedule a tour of
+              available spaces.
+            </p>
+            <div class="contact-card">
+              <div class="contact-person">
+                <h4 class="person-title">Leasing Contact</h4>
+                <p class="person-name">Sarah Johnson</p>
+                <p class="person-role">Senior Leasing Manager</p>
+              </div>
+              <div class="contact-details">
+                <div class="contact-item">
+                  <lucide-icon name="phone" class="contact-icon"></lucide-icon>
+                  <span>(410) 555-1234</span>
+                </div>
+                <div class="contact-item">
+                  <lucide-icon name="mail" class="contact-icon"></lucide-icon>
+                  <span>leasing&#64;hillmgt.com</span>
+                </div>
+              </div>
+              <div class="management-section">
+                <h4 class="management-title">Property Management</h4>
+                <div class="contact-item">
+                  <lucide-icon name="phone" class="contact-icon"></lucide-icon>
+                  <span>(410) 555-5678</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-section">
+            <h3 class="form-title">Request Information</h3>
+            <form [formGroup]="contactForm"
+                  (ngSubmit)="onSubmit()"
+                  name="contact"
+                  method="POST"
+                  netlify
+                  netlify-honeypot="bot-field" class="contact-form">
+              <!-- Honeypot anti-spam field -->
+              <input type="hidden" name="form-name" value="contact">
+              <p hidden>
+                <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
+              </p>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="name" class="form-label">Name</label>
+                  <div class="input-container">
+                    <lucide-icon name="user" class="input-icon"></lucide-icon>
+                    <input 
+                      type="text" 
+                      id="name" 
+                      formControlName="name"
+                      class="form-input"
+                      [class.error]="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+                  </div>
+                  @if (contactForm.get('name')?.invalid && contactForm.get('name')?.touched) {
+                    <div class="error-message">Name is required</div>
+                  }
+                </div>
+                <div class="form-group">
+                  <label for="email" class="form-label">Email</label>
+                  <div class="input-container">
+                    <lucide-icon name="mail" class="input-icon"></lucide-icon>
+                    <input 
+                      type="email" 
+                      id="email" 
+                      formControlName="email"
+                      class="form-input"
+                      [class.error]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+                  </div>
+                  @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
+                    <div class="error-message">
+                      @if (contactForm.get('email')?.errors?.['required']) {
+                        Email is required
+                      }
+                      @if (contactForm.get('email')?.errors?.['email']) {
+                        Please enter a valid email address
+                      }
+                    </div>
+                  }
+                </div>
+                <div class="form-group">
+                  <label for="phone" class="form-label">Phone</label>
+                  <div class="input-container">
+                    <lucide-icon name="phone" class="input-icon"></lucide-icon>
+                    <input 
+                      type="tel" 
+                      id="phone" 
+                      formControlName="phone"
+                      class="form-input">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="company" class="form-label">Company</label>
+                  <div class="input-container">
+                    <lucide-icon name="building" class="input-icon"></lucide-icon>
+                    <input 
+                      type="text" 
+                      id="company" 
+                      formControlName="company"
+                      class="form-input">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group full-width">
+                <label for="message" class="form-label">Message</label>
+                <textarea 
+                  id="message" 
+                  rows="4" 
+                  formControlName="message"
+                  class="form-textarea"
+                  [class.error]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched"></textarea>
+                @if (contactForm.get('message')?.invalid && contactForm.get('message')?.touched) {
+                  <div class="error-message">Message is required</div>
+                }
+              </div>
+              <button type="submit" class="submit-button" [disabled]="contactForm.invalid">
+                <lucide-icon name="send-horizontal" class="button-icon"></lucide-icon>
+                Send Request
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>

@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './components/header/header';
 import { HeroComponent } from './components/hero/hero';
+import { GalleryComponent } from './components/gallery/gallery';
+import { ContactComponent } from './components/contact/contact'
 import { PropertyDetailsComponent } from './components/property-details/property-details';
 import { LocationComponent } from './components/location/location';
 import { FooterComponent } from './components/footer/footer';
@@ -22,6 +24,8 @@ import { LucideIconsModule } from './lucide.module';
     PropertyDetailsComponent,
     LocationComponent,
     FooterComponent,
+    GalleryComponent,
+    ContactComponent,
     CommonModule,
     RouterModule,
     MatTabsModule,

@@ -1,43 +1,24 @@
-<!-- <section class="hero-banner">
-  <video 
+<section class="hero-banner">
+     <video 
     class="hero-video" 
-    [src]="currentVideo" 
+    [class.visible]="showVideoA" 
+    [class.hidden]="!showVideoA"
+    [src]="videoA" 
     autoplay 
-    [muted]="true" 
-    loop
+    [muted] = "true"
+    loop 
     playsinline
     preload="auto">
   </video>
-  <div class="hero-overlay">
-    <div class="container">
-      <div class="hero-content">
-        <h1 class="hero-title">{{ property?.name }}</h1>
-        <div class="hero-address">
-          <p>{{ property?.address }}</p>
-          <p>{{ property?.city }}, {{ property?.state }} {{ property?.zipCode }}</p>
-        </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-number">{{ (property?.totalSquareFootage | number) || '0' }}</span>
-            <span class="stat-label">Total Sq Ft</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number">{{ availableUnits }}</span>
-            <span class="stat-label">Available Units</span>
-          </div>
-        </div>
-        <a href="#contact" class="cta-button large">Schedule a Tour</a>
-      </div>
-    </div>
-  </div>
-</section> -->
-<section class="hero-banner">
-    <video 
+
+  <video 
     class="hero-video" 
-    [src]="currentVideo" 
+    [class.visible]="!showVideoA" 
+    [class.hidden]="showVideoA"
+    [src]="videoB" 
     autoplay 
-    [muted]="true" 
-    loop
+    [muted] = "true"
+    loop 
     playsinline
     preload="auto">
   </video>

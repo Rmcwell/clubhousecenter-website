@@ -1,5 +1,5 @@
 .hero-banner {
-  height: 65vh;
+  height: 75vh;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -12,16 +12,29 @@
 
 .hero-video {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+  z-index: -1;
+  pointer-events: none; /* so clicks go through */
+}
+
+.hero-video.visible {
+  opacity: 1;
+  z-index: -1;
+}
+
+.hero-video.hidden {
+  opacity: 0;
+  z-index: -2;
 }
 
 .hero-container {
   position: relative;
-  height: 65vh;
+  height: 75vh;
   width: 100%;
   /* Remove margin-top: 4rem; */
   overflow: hidden;
@@ -134,122 +147,3 @@
         font-size: 1rem;
       }
     }
-
-
-
-
-    /*
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 0, 0, 0.3));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-content {
-  text-align: center;
-  color: white;
-  max-width: 800px;
-  
-  .hero-title {
-    font-size: 4rem;
-    font-weight: 300;
-    margin-bottom: 1rem;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
-  
-  .hero-address {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
-    
-    p {
-      margin: 0.5rem 0;
-    }
-  }
-  
-  .hero-stats {
-    display: flex;
-    justify-content: center;
-    gap: 4rem;
-    margin-bottom: 3rem;
-    
-    .stat {
-      text-align: center;
-      
-      .stat-number {
-        display: block;
-        font-size: 2.5rem;
-        font-weight: 600;
-        color: #fff;
-      }
-      
-      .stat-label {
-        font-size: 0.9rem;
-        opacity: 0.8;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-banner {
-    height: 80vh;
-    background-attachment: scroll;
-  }
-  
-  .hero-content {
-    padding: 0 1rem;
-    
-    .hero-title {
-      font-size: 2.5rem;
-    }
-    
-    .hero-stats {
-      flex-direction: column;
-      gap: 2rem;
-    }
-  }
-}
-
-.cta-button {
-  background-color: #4682B4;
-  color: white;
-  padding: 0.75rem 2rem;
-  font-size: 1.1rem;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-
-  &:hover {
-    background-color: #004b88;
-    transform: translateY(-2px);
-  }
-
-  &:active {
-    transform: scale(0.98);
-  }
-}
-
-.large {
-  font-size: 1.2rem;
-} */

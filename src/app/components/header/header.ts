@@ -13,7 +13,7 @@ import { LucideIconsModule } from '../../lucide.module';
   styleUrls: ['./header.css']
 })
 export class HeaderComponent {
-  websiteLogo: string = 'assets/images/websiteLogo.png';
+  websiteLogo: string = 'assets/images/websiteLogo.webp';
 
   isMobileMenuOpen = false;
 

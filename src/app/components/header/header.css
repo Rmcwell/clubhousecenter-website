@@ -77,3 +77,18 @@
 .logo-container img {
   height: 50px; /* Adjust as needed */
 }
+
+.schedule-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.schedule-button:hover {
+  background-color: #45a049;
+}

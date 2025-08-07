@@ -92,3 +92,19 @@
 .schedule-button:hover {
   background-color: #45a049;
 }
+
+.nav-links {
+  display: flex; /* desktop default */
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    /* other mobile menu styles */
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+}

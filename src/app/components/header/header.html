@@ -6,7 +6,7 @@
               <img [src]="websiteLogo" alt="Clubhouse Center Logo" />
             </a>
           </div>
-          <ul class="nav-links">
+          <ul class="nav-links" [class.open]="isMobileMenuOpen">
             <li>
               <a href="#contact">
                 <button class="schedule-button">

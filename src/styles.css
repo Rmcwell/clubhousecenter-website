@@ -71,3 +71,8 @@ body {
 
 .hover\:bg-blue-700:hover { background-color: #1d4ed8; }
 .hover\:text-blue-600:hover { color: #2563eb; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
+}

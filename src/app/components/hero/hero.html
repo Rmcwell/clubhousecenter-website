@@ -1,4 +1,4 @@
-<section class="hero-banner">
+<!-- <section class="hero-banner">
   <video 
     class="hero-video" 
     [src]="currentVideo" 
@@ -30,4 +30,33 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
+
+<div class="hero-container">
+      <div class="hero-background">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <div class="container">
+          <div class="content-wrapper">
+            <h1 class="hero-title">
+              Clubhouse Center
+            </h1>
+            <p class="hero-subtitle">
+              300 Clubhouse Road, Hunt Valley, MD 21031
+            </p>
+            <div class="hero-badges">
+              <span class="hero-badge">
+                {{ (property?.totalSquareFootage | number) || '0' }} Total Sq Ft
+              </span>
+              <span class="hero-badge">
+                {{ availableUnits }} Available Units
+              </span>
+              <span class="hero-badge">
+                Prime Location
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

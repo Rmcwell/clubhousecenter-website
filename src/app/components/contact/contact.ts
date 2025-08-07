@@ -29,7 +29,13 @@ export class ContactComponent {
     if (this.contactForm.valid) {
       console.log('Form Data:', this.contactForm.value);
       // Handle form submission here
-      
+      if (this.contactForm.valid) {
+        // ✅ Let the browser submit the form as normal
+    } else {
+        Object.keys(this.contactForm.controls).forEach(key => {
+        this.contactForm.get(key)?.markAsTouched();
+        });
+  }
       // Reset form after successful submission
       this.contactForm.reset();
     } else {

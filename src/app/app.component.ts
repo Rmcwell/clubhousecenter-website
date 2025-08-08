@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './components/header/header';
-import { HeroComponent } from './components/hero/hero';
-import { GalleryComponent } from './components/gallery/gallery';
-import { ContactComponent } from './components/contact/contact'
-import { PropertyDetailsComponent } from './components/property-details/property-details';
-import { LocationComponent } from './components/location/location';
+import { HeroComponent } from './pages/home/hero/hero';
+import { GalleryComponent } from './pages/home/gallery/gallery';
+import { ContactComponent } from './pages/home/contact/contact'
+import { PropertyDetailsComponent } from './pages/home/property-details/property-details';
+import { LocationComponent } from './pages/home/location/location';
 import { FooterComponent } from './components/footer/footer';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonModule } from '@angular/material/button';

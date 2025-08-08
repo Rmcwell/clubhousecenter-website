@@ -1,29 +1,29 @@
 <header class="header">
-      <nav class="navbar">
-        <div class="container">
-          <div class="nav-brand">
-            <a href="/" class="logo-container">
-              <img [src]="websiteLogo" alt="Clubhouse Center Logo" />
-            </a>
-          </div>
-          <ul class="nav-links" [class.open]="isMobileMenuOpen">
-            <li>
-              <a href="#contact">
-                <button class="schedule-button">
-                  Schedule a Tour
-                </button>
-              </a>
-            </li>
-            <li><a href="#property-details">Property Details</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#location">Location</a></li>
-            <li><a href="#contact" class="cta-button">Contact Us</a></li>
-          </ul>
-          <button class="mobile-menu-toggle" (click)="toggleMobileMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-      </nav>
-    </header>
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-brand">
+        <a href="/" class="logo-container">
+          <img [src]="websiteLogo" alt="Clubhouse Center Logo" />
+        </a>
+      </div>
+      <ul class="nav-links" [class.open]="isMobileMenuOpen">
+        <li>
+          <a href="#contact">
+            <button class="schedule-button">
+              Schedule a Tour
+            </button>
+          </a>
+        </li>
+        <li><a href="#property-details">Property Details</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#contact" class="cta-button">Contact Us</a></li>
+      </ul>
+      <button class="mobile-menu-toggle" (click)="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>

@@ -84,91 +84,95 @@
 }
 
 .amenities-list {
-list-style: none;
-padding: 0;
-margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .amenities-list li {
-display: flex;
-align-items: center;
-gap: 10px;
-margin-bottom: 18px;
-font-size: 14px;
-color: #333;
-line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
 }
 
 .amenity-icon {
-width: 20px;
-height: 20px;
-color: #4682B4;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: #4682B4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .availability-section {
-margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .availability-title {
-font-size: 1.5rem;
-font-weight: bold;
-color: #1e3a8a;
-margin-bottom: 1rem;
-margin-top: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+  margin-top: 0;
 }
 
 .table-container {
-overflow-x: auto;
-background-color: white;
-border-radius: 0.5rem;
-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
 }
 
 .availability-table {
-width: 100%;
-border-collapse: separate; /* Change from collapse to separate */
-border-spacing: 0;
+  width: 100%;
+  border-collapse: separate;
+  /* Change from collapse to separate */
+  border-spacing: 0;
 }
 
 .table-header {
-background-color: #3b4976;
-color: white;
+  background-color: #3b4976;
+  color: white;
 }
 
 .table-header th {
-padding: 1rem;
-text-align: left;
-font-weight: 600;
-font-size: 0.875rem;
-letter-spacing: 0.05em;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
 }
 
 .table-row {
-position: relative;
-border-bottom: 1px solid #e5e7eb;
+  position: relative;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .table-row:last-child {
-border-bottom: none;
+  border-bottom: none;
 }
 
 .table-row td {
-padding: 1rem;
-color: #374151;
-background-color: white; /* Ensure white background */
+  padding: 1rem;
+  color: #374151;
+  background-color: white;
+  /* Ensure white background */
 }
 
 /* Colored left border using border-left instead of ::before */
 .table-row.available td:first-child {
-border-left: 4px solid #10b981; /* Green for available */
+  border-left: 4px solid #10b981;
+  /* Green for available */
 }
 
 .table-row.coming-soon td:first-child {
-border-left: 4px solid #f59e0b; /* Orange for coming soon */
+  border-left: 4px solid #f59e0b;
+  /* Orange for coming soon */
 }
 
 .suite-number {
@@ -200,30 +204,30 @@ border-left: 4px solid #f59e0b; /* Orange for coming soon */
   .property-section {
     padding: 2rem 0;
   }
-  
+
   .section-title {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
   }
-  
+
   .content-grid {
     gap: 1.5rem;
     margin-bottom: 2rem;
   }
-  
+
   .amenities-section {
     padding: 1rem;
   }
-  
+
   .availability-title {
     font-size: 1.25rem;
   }
-  
+
   .table-header th {
     padding: 0.75rem 0.5rem;
     font-size: 0.75rem;
   }
-  
+
   .table-row td {
     padding: 0.75rem 0.5rem;
     font-size: 0.875rem;

@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>ClubhouseCenter</title>
@@ -9,7 +10,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
   <app-root></app-root>
+
+  <!-- Hidden form for Netlify detection -->
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="contact" />
+  
+    <!-- Honeypot field -->
+    <input type="text" name="bot-field" />
+  
+    <!-- Match the same field names as your Angular form -->
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="tel" name="phone" />
+    <input type="text" name="company" />
+    <textarea name="message"></textarea>
+  </form>
+
 </body>
+
 </html>

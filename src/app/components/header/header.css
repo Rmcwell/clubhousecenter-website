@@ -29,13 +29,13 @@
   list-style: none;
   gap: 2rem;
   align-items: center;
-  
+
   li a {
     text-decoration: none;
     color: #333;
     font-weight: 500;
     transition: color 0.3s ease;
-    
+
     &:hover {
       color: #003366;
     }
@@ -49,7 +49,7 @@
   border: none;
   cursor: pointer;
   padding: 5px;
-  
+
   span {
     width: 25px;
     height: 3px;
@@ -63,7 +63,7 @@
   .nav-links {
     display: none;
   }
-  
+
   .mobile-menu-toggle {
     display: flex;
   }
@@ -75,7 +75,8 @@
 }
 
 .logo-container img {
-  height: 50px; /* Adjust as needed */
+  height: 50px;
+  /* Adjust as needed */
 }
 
 .schedule-button {
@@ -94,7 +95,8 @@
 }
 
 .nav-links {
-  display: flex; /* desktop default */
+  display: flex;
+  /* desktop default */
 }
 
 @media (max-width: 768px) {

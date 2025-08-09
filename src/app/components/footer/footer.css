@@ -1,130 +1,130 @@
 .footer {
-      background-color: #1e293b;
-      color: white;
-      padding: 3rem 0;
-    }
+  background-color: #1e293b;
+  color: white;
+  padding: 3rem 0;
+}
 
-    .footer-container {
-      max-width: 80rem;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
+.footer-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
 
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 3rem;
-    }
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
 
-    @media (min-width: 768px) {
-      .footer-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 
-    .footer-section {
-      display: flex;
-      flex-direction: column;
-    }
+.footer-section {
+  display: flex;
+  flex-direction: column;
+}
 
-    .footer-title {
-      font-size: 1.25rem;
-      font-weight: bold;
-      margin-bottom: 1.5rem;
-      color: white;
-    }
+.footer-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: white;
+}
 
-    .footer-subtitle {
-      font-size: 1.125rem;
-      font-weight: bold;
-      margin-bottom: 1.5rem;
-      color: white;
-    }
+.footer-subtitle {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: white;
+}
 
-    .footer-description {
-      color: #d1d5db;
-      line-height: 1.6;
-      margin: 0;
-    }
+.footer-description {
+  color: #d1d5db;
+  line-height: 1.6;
+  margin: 0;
+}
 
-    .footer-links {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-    .footer-links li {
-      margin-bottom: 0.75rem;
-    }
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
 
-    .footer-link {
-      color: #d1d5db;
-      text-decoration: none;
-      transition: color 0.2s ease-in-out;
-    }
+.footer-link {
+  color: #d1d5db;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
 
-    .footer-link:hover {
-      color: white;
-    }
+.footer-link:hover {
+  color: white;
+}
 
-    .footer-contact {
-      color: #d1d5db;
-    }
+.footer-contact {
+  color: #d1d5db;
+}
 
-    .footer-contact p {
-      margin: 0.5rem 0;
-    }
+.footer-contact p {
+  margin: 0.5rem 0;
+}
 
-    .contact-phone {
-      margin-top: 1rem !important;
-    }
+.contact-phone {
+  margin-top: 1rem !important;
+}
 
-    .footer-bottom {
-      border-top: 1px solid #4b5563;
-      margin-top: 3rem;
-      padding-top: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+.footer-bottom {
+  border-top: 1px solid #4b5563;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    @media (min-width: 768px) {
-      .footer-bottom {
-        flex-direction: row;
-        justify-content: space-between;
-      }
-    }
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 
-    .footer-copyright {
-      color: #9ca3af;
-      font-size: 0.875rem;
-      margin: 0;
-    }
+.footer-copyright {
+  color: #9ca3af;
+  font-size: 0.875rem;
+  margin: 0;
+}
 
-    .footer-legal {
-      margin-top: 1rem;
-    }
+.footer-legal {
+  margin-top: 1rem;
+}
 
-    @media (min-width: 768px) {
-      .footer-legal {
-        margin-top: 0;
-      }
-    }
+@media (min-width: 768px) {
+  .footer-legal {
+    margin-top: 0;
+  }
+}
 
-    .footer-legal-links {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      gap: 2rem;
-    }
+.footer-legal-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;
+}
 
-    .footer-legal-link {
-      color: #9ca3af;
-      text-decoration: none;
-      transition: color 0.2s ease-in-out;
-    }
+.footer-legal-link {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
 
-    .footer-legal-link:hover {
-      color: white;
-    }
+.footer-legal-link:hover {
+  color: white;
+}

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 interface Image {
-    id: number;
+  id: number;
   url: string;
   alt: string;
   title: string;
@@ -15,10 +15,10 @@ interface Image {
   imports: []
 })
 export class GalleryComponent {
-    currentIndex = 0;
-    showControls = false;
+  currentIndex = 0;
+  showControls = false;
 
-     images: Image[] = [
+  images: Image[] = [
     {
       id: 1,
       url: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80',

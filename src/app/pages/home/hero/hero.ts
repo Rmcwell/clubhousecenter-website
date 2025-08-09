@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-hero',
   standalone: true,
-    imports: [
+  imports: [
     CommonModule,
   ],
   templateUrl: './hero.html',
@@ -33,7 +33,7 @@ export class HeroComponent implements OnInit {
   showVideoA = true;
   private videoInterval: any;
 
-  constructor(private propertyService: PropertyService) {}
+  constructor(private propertyService: PropertyService) { }
 
   ngOnInit(): void {
     this.propertyService.getProperty().subscribe(property => {
@@ -63,7 +63,7 @@ export class HeroComponent implements OnInit {
   //   }, 5000); // Switch every 5 seconds
   // }
 
-   private startVideoRotation(): void {
+  private startVideoRotation(): void {
     this.videoInterval = setInterval(() => {
       this.currentVideoIndex = (this.currentVideoIndex + 1) % this.videoList.length;
 

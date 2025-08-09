@@ -7,7 +7,7 @@ import { LucideIconsModule } from '../../../lucide.module';
 @Component({
   selector: 'app-location',
   standalone: true,
-    imports: [
+  imports: [
     CommonModule,
     LucideIconsModule
   ],
@@ -17,7 +17,7 @@ import { LucideIconsModule } from '../../../lucide.module';
 export class LocationComponent implements OnInit {
   property: Property | null = null;
 
-  constructor(private propertyService: PropertyService) {}
+  constructor(private propertyService: PropertyService) { }
 
   ngOnInit(): void {
     this.propertyService.getProperty().subscribe(

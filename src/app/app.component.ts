@@ -38,4 +38,4 @@ import { LucideIconsModule } from './lucide.module';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {}
+export class AppComponent { }

@@ -3,7 +3,6 @@ import { Property } from '../../../models/property.model';
 import { PropertyService } from '../../../services/property.service';
 import { CommonModule } from '@angular/common';
 import { LucideIconsModule } from '../../../lucide.module';
-import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-property-details',
@@ -13,14 +12,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
     LucideIconsModule,
   ],
   templateUrl: './property-details.html',
-  styleUrls: ['./property-details.css'],
-  animations: [
-    trigger('expandCollapse', [
-      state('collapsed', style({ height: '0px', opacity: 0, overflow: 'hidden' })),
-      state('expanded', style({ height: '*', opacity: 1 })),
-      transition('collapsed <=> expanded', animate('300ms ease'))
-    ])
-  ]
+  styleUrls: ['./property-details.css']
 })
 export class PropertyDetailsComponent implements OnInit {
 
@@ -51,7 +43,7 @@ export class PropertyDetailsComponent implements OnInit {
       size: 81000,
       rate: 13,
       status: "COMING SOON",
-      rowClass: "table-row available",
+      rowClass: "table-row coming-soon",
       statusClass: "status-coming-soon",
       expanded: false
     },
@@ -61,13 +53,11 @@ export class PropertyDetailsComponent implements OnInit {
       size: 45000,
       rate: 13,
       status: "AVAILABLE",
-      rowClass: "table-row coming-soon",
+      rowClass: "table-row available",
       statusClass: "status-available",
       expanded: false
     }
-  ]
-
-
+  ];
 
   property: Property | null = null;
 
@@ -79,7 +69,7 @@ export class PropertyDetailsComponent implements OnInit {
     });
   }
 
-  getStatusClass(status: string): string {
-    return status.toLowerCase().replace(' ', '-');
+  toggleExpand(unit: any): void {
+    unit.expanded = !unit.expanded;
   }
 }

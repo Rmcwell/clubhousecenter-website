@@ -12,7 +12,8 @@ import {
   Phone,
   User,
   Warehouse,
-  SendHorizontal
+  SendHorizontal,
+  ChevronDown
 } from 'lucide-angular';
 
 @NgModule({
@@ -29,7 +30,8 @@ import {
       Phone,
       User,
       Warehouse,
-      SendHorizontal
+      SendHorizontal,
+      ChevronDown
     })
   ],
   exports: [LucideAngularModule]

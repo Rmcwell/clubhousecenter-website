@@ -1,3 +1,4 @@
+/* === Layout & Typography === */
 .property-section {
   padding: 3rem 0;
   background-color: white;
@@ -14,9 +15,9 @@
   font-weight: bold;
   color: #1f2937;
   margin-bottom: 2rem;
-  margin-top: 0;
 }
 
+/* === Grid Layout === */
 .content-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -30,16 +31,17 @@
   }
 }
 
+/* === Info Section === */
 .info-section {
   display: flex;
   flex-direction: column;
 }
 
-.info-title {
+.info-title,
+.amenities-title {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  margin-top: 0;
   color: #1f2937;
 }
 
@@ -56,31 +58,17 @@
   gap: 5px;
 }
 
-.building-icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  color: #2563eb;
-  margin-right: 0.5rem;
-}
-
 .building-text {
   color: #374151;
   font-weight: 500;
 }
 
+/* === Amenities Section === */
 .amenities-section {
   background-color: white;
   padding: 1.5rem;
   border-radius: 0.5rem;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-}
-
-.amenities-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  margin-top: 0;
-  color: #1f2937;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .amenities-list {
@@ -96,19 +84,15 @@
   margin-bottom: 18px;
   font-size: 14px;
   color: #333;
-  line-height: 1.5;
 }
 
 .amenity-icon {
   width: 20px;
   height: 20px;
   color: #4682B4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
 }
 
+/* === Availability Section === */
 .availability-section {
   margin-top: 2rem;
 }
@@ -118,88 +102,100 @@
   font-weight: bold;
   color: #1e3a8a;
   margin-bottom: 1rem;
-  margin-top: 0;
 }
 
 .table-container {
   overflow-x: auto;
   background-color: white;
   border-radius: 0.5rem;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.availability-table {
+/* === Enhanced Table === */
+.availability-table.enhanced {
   width: 100%;
   border-collapse: separate;
-  /* Change from collapse to separate */
   border-spacing: 0;
+  font-size: 0.875rem;
+  color: #1f2937;
 }
 
-.table-header {
-  background-color: #3b4976;
-  color: white;
+.availability-table.enhanced thead {
+  background-color: #1e3a8a;
+  color: #fff;
 }
 
-.table-header th {
+.availability-table.enhanced th {
   padding: 1rem;
   text-align: left;
   font-weight: 600;
-  font-size: 0.875rem;
-  letter-spacing: 0.05em;
-}
-
-.table-row {
-  position: relative;
+  letter-spacing: 0.03em;
   border-bottom: 1px solid #e5e7eb;
 }
 
-.table-row:last-child {
-  border-bottom: none;
-}
-
-.table-row td {
+.availability-table.enhanced td {
   padding: 1rem;
-  color: #374151;
-  background-color: white;
-  /* Ensure white background */
+  background-color: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: middle;
 }
 
-/* Colored left border using border-left instead of ::before */
-.table-row.available td:first-child {
-  border-left: 4px solid #10b981;
-  /* Green for available */
+.availability-table.enhanced tr:hover td {
+  background-color: #eef2ff;
 }
 
-.table-row.coming-soon td:first-child {
-  border-left: 4px solid #f59e0b;
-  /* Orange for coming soon */
-}
-
+/* === Table Cell Styling === */
 .suite-number {
   font-weight: 600;
-  color: #1f2937;
+  color: #111827;
+}
+
+.use-type {
+  color: #4b5563;
+}
+
+.size,
+.rate {
+  font-weight: 500;
+  color: #374151;
+}
+
+/* === Status Pills === */
+.status-pill {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .status-available {
   background-color: #d1fae5;
   color: #065f46;
-  padding: 0.25rem 0.75rem;
-  border-radius: 1rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
 }
 
 .status-coming-soon {
   background-color: #fef3c7;
   color: #92400e;
-  padding: 0.25rem 0.75rem;
-  border-radius: 1rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
 }
 
+/* === Arrow Cell === */
+.arrow-cell {
+  text-align: center;
+  cursor: pointer;
+}
+
+.arrow-cell lucide-icon {
+  transition: transform 0.3s ease;
+  color: #6b7280;
+}
+
+.arrow-cell lucide-icon.rotate {
+  transform: rotate(180deg);
+}
+
+/* === Responsive Adjustments === */
 @media (max-width: 767px) {
   .property-section {
     padding: 2rem 0;
@@ -223,14 +219,9 @@
     font-size: 1.25rem;
   }
 
-  .table-header th {
-    padding: 0.75rem 0.5rem;
-    font-size: 0.75rem;
-  }
-
-  .table-row td {
+  .availability-table.enhanced th,
+  .availability-table.enhanced td {
     padding: 0.75rem 0.5rem;
     font-size: 0.875rem;
   }
 }
-

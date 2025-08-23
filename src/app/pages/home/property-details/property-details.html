@@ -1,6 +1,7 @@
 <section class="property-section" id="property-details">
   <div class="container">
     <h2 class="section-title">Property Details</h2>
+
     <div class="content-grid">
       <div class="info-section">
         <h3 class="info-title">About Clubhouse Center</h3>
@@ -21,53 +22,36 @@
           <span class="building-text">120,000 SF Total Area</span>
         </div>
       </div>
+
       <div class="amenities-section">
         <h3 class="amenities-title">Building Amenities</h3>
         <ul class="amenities-list">
-          <li>
-            <lucide-icon name="lock" class="amenity-icon"></lucide-icon>
-            <span>24/7 Secure Building Access</span>
-          </li>
-          <li>
-            <lucide-icon name="layout-dashboard" class="amenity-icon"></lucide-icon>
-            <span>Modernized Lobby and Common Areas</span>
-          </li>
-          <li>
-            <lucide-icon name="circle-parking" class="amenity-icon"></lucide-icon>
-            <span>On-site Covered Parking</span>
-          </li>
-          <li>
-            <lucide-icon name="wifi" class="amenity-icon"></lucide-icon>
-            <span>High-Speed Internet Infrastructure</span>
-          </li>
-          <li>
-            <lucide-icon name="user-check" class="amenity-icon"></lucide-icon>
-            <span>On-site Property Management</span>
-          </li>
-          <li>
-            <lucide-icon name="fan" class="amenity-icon"></lucide-icon>
-            <span>Energy-Efficient HVAC Systems</span>
+          <li><lucide-icon name="lock" class="amenity-icon"></lucide-icon> <span>24/7 Secure Building Access</span></li>
+          <li><lucide-icon name="layout-dashboard" class="amenity-icon"></lucide-icon> <span>Modernized Lobby and Common
+              Areas</span></li>
+          <li><lucide-icon name="circle-parking" class="amenity-icon"></lucide-icon> <span>On-site Covered
+              Parking</span></li>
+          <li><lucide-icon name="wifi" class="amenity-icon"></lucide-icon> <span>High-Speed Internet
+              Infrastructure</span></li>
+          <li><lucide-icon name="user-check" class="amenity-icon"></lucide-icon> <span>On-site Property
+              Management</span></li>
+          <li><lucide-icon name="fan" class="amenity-icon"></lucide-icon> <span>Energy-Efficient HVAC Systems</span>
           </li>
         </ul>
       </div>
     </div>
 
-    @for (unit of units; track unit)
-    {
-
-    }
-
     <div class="availability-section">
       <h3 class="availability-title">Current Availability</h3>
       <div class="table-container">
-        <table class="availability-table">
+        <table class="availability-table enhanced">
           <thead>
-            <tr class="table-header">
-              <th>SPACE</th>
-              <th>USE</th>
+            <tr>
+              <th>Space</th>
+              <th>Use</th>
               <th>Size</th>
-              <th>RATE</th>
-              <th>STATUS</th>
+              <th>Rate</th>
+              <th>Status</th>
               <th></th>
             </tr>
           </thead>
@@ -76,12 +60,15 @@
             {
             <tr [ngClass]="unit.rowClass">
               <td class="suite-number">{{ unit.floorUnitNumber }}</td>
-              <td>{{ unit.use }}</td>
-              <td>{{ unit.size | number:'1.0-0' }} SF</td>
-              <td>{{ unit.rate | currency:'USD'}} /SF/Year</td>
-              <td><span [ngClass]="unit.statusClass">{{ unit.status }}</span></td>
-              <td class="arrow-cell">
-                <span class="arrow" [ngClass]="{ 'up': unit.expanded, 'down': !unit.expanded }"></span> </td>
+              <td class="use-type">{{ unit.use }}</td>
+              <td class="size">{{ unit.size | number:'1.0-0' }} SF</td>
+              <td class="rate">${{ unit.rate }} /SF/Year</td>
+              <td>
+                <span class="status-pill" [ngClass]="unit.statusClass">{{ unit.status }}</span>
+              </td>
+              <td class="arrow-cell" (click)="toggleExpand(unit)">
+                <lucide-icon name="chevron-down" [ngClass]="{ 'rotate': unit.expanded }"></lucide-icon>
+              </td>
             </tr>
             }
           </tbody>

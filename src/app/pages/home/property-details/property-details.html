@@ -52,49 +52,38 @@
       </div>
     </div>
 
+    @for (unit of units; track unit)
+    {
+
+    }
+
     <div class="availability-section">
       <h3 class="availability-title">Current Availability</h3>
       <div class="table-container">
         <table class="availability-table">
           <thead>
             <tr class="table-header">
-              <th>UNIT #</th>
-              <th>TYPE</th>
-              <th>SQ FT</th>
-              <th>RATE/SQ FT</th>
-              <th>LOADING DOCKS</th>
-              <th>CEILING HEIGHT</th>
+              <th>SPACE</th>
+              <th>USE</th>
+              <th>Size</th>
+              <th>RATE</th>
               <th>STATUS</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
-            <tr class="table-row available">
-              <td class="suite-number">100</td>
-              <td>Office</td>
-              <td>2,500</td>
-              <td>$24</td>
-              <td>2</td>
-              <td>28 ft</td>
-              <td><span class="status-available">AVAILABLE</span></td>
+            @for (unit of units; track unit)
+            {
+            <tr [ngClass]="unit.rowClass">
+              <td class="suite-number">{{ unit.floorUnitNumber }}</td>
+              <td>{{ unit.use }}</td>
+              <td>{{ unit.size | number:'1.0-0' }} SF</td>
+              <td>{{ unit.rate | currency:'USD'}} /SF/Year</td>
+              <td><span [ngClass]="unit.statusClass">{{ unit.status }}</span></td>
+              <td class="arrow-cell">
+                <span class="arrow" [ngClass]="{ 'up': unit.expanded, 'down': !unit.expanded }"></span> </td>
             </tr>
-            <tr class="table-row available">
-              <td class="suite-number">205</td>
-              <td>Warehouse</td>
-              <td>1,800</td>
-              <td>$26</td>
-              <td>6</td>
-              <td>59 ft</td>
-              <td><span class="status-available">AVAILABLE</span></td>
-            </tr>
-            <tr class="table-row coming-soon">
-              <td class="suite-number">310</td>
-              <td>Warehouse</td>
-              <td>3,200</td>
-              <td>$28</td>
-              <td>2</td>
-              <td>24 ft</td>
-              <td><span class="status-coming-soon">COMING SOON</span></td>
-            </tr>
+            }
           </tbody>
         </table>
       </div>
